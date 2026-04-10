@@ -3,77 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Purdue CS</title>
+    <title>Jiya Dhiman | Purdue CS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .brutalist-card {
-            border: 3px solid black;
-            box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
-            transition: all 0.2s ease;
+        :root {
+            --primary: #d4759e;
+            --background: linear-gradient(135deg, #fef5f8 0%, #fef3f9 25%, #f9f1f9 50%, #f5f3fb 75%, #f3f5fc 100%);
         }
-        .brutalist-card:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+        body {
+            background: var(--background);
+            background-attachment: fixed;
+            color: #2d1b2e;
+        }
+        .brutalist-card {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(212, 117, 158, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 0.625rem;
         }
     </style>
 </head>
-<body class="bg-[#F4F4F4] font-sans text-black">
+<body class="font-sans">
 
-    <nav class="p-6 border-b-4 border-black bg-white flex justify-between items-center sticky top-0 z-50">
-        <h1 class="text-2xl font-black tracking-tighter">BOILERMAKER_CS</h1>
-        <div class="space-x-6 font-bold">
-            <a href="#about" class="hover:underline">About</a>
-            <a href="#projects" class="hover:underline">Projects</a>
-            <a href="resume.pdf" class="bg-yellow-400 px-4 py-2 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">Resume</a>
+    <nav class="fixed top-0 w-full bg-white/70 backdrop-blur-md border-b border-pink-100 z-50 px-8 py-4 flex justify-between items-center">
+        <span class="text-[#d4759e] font-bold text-xl">Portfolio</span>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#about" class="hover:text-[#d4759e]">About</a>
+            <a href="#experience" class="hover:text-[#d4759e]">Experience</a>
+            <a href="#projects" class="hover:text-[#d4759e]">Projects</a>
+            <a href="#contact" class="hover:text-[#d4759e]">Contact</a>
         </div>
     </nav>
 
-    <header class="max-w-6xl mx-auto py-20 px-6">
-        <div class="brutalist-card bg-white p-10 md:flex items-center justify-between">
-            <div>
-                <span class="bg-purple-400 text-white px-2 py-1 font-bold uppercase text-sm">Class of 202X</span>
-                <h2 class="text-6xl font-black mt-4">Hi, I'm Jiya Dhiman!</h2>
-                <p class="text-xl mt-4 max-w-md font-medium text-gray-700">
-                    Freshman Computer Science student at **Purdue University**. 
-                    Building cool stuff
-                </p>
-            </div>
-            <div class="mt-10 md:mt-0">
-                <div class="w-48 h-48 bg-yellow-300 border-4 border-black rounded-full flex items-center justify-center text-5xl">
-                    🚂
-                </div>
-            </div>
+    <section id="hero" class="min-h-screen flex flex-col items-center justify-center text-center px-6">
+        <div class="w-48 h-48 rounded-full border-4 border-[#d4759e]/20 overflow-hidden mb-8 shadow-xl">
+            <img src="YOUR_IMAGE_LINK_HERE" alt="Jiya Dhiman" class="w-full h-full object-cover">
         </div>
-    </header>
-
-    <section id="projects" class="max-w-6xl mx-auto py-10 px-6">
-        <h3 class="text-4xl font-black mb-8 underline decoration-yellow-400">Featured Work</h3>
-        <div class="grid md:grid-cols-2 gap-8">
-            
-            <div class="brutalist-card bg-blue-100 p-6">
-                <h4 class="text-2xl font-black">CS 180 Project</h4>
-                <p class="mt-2 font-medium">A multi-threaded Java application built for my first-semester honors course.</p>
-                <div class="mt-4 flex gap-2">
-                    <span class="border-2 border-black px-2 py-1 text-xs font-bold bg-white">JAVA</span>
-                    <span class="border-2 border-black px-2 py-1 text-xs font-bold bg-white">GIT</span>
-                </div>
-            </div>
-
-            <div class="brutalist-card bg-green-100 p-6">
-                <h4 class="text-2xl font-black">Personal Website</h4>
-                <p class="mt-2 font-medium">The site you're looking at right now! Built with Tailwind CSS and GitHub Pages.</p>
-                <div class="mt-4 flex gap-2">
-                    <span class="border-2 border-black px-2 py-1 text-xs font-bold bg-white">HTML</span>
-                    <span class="border-2 border-black px-2 py-1 text-xs font-bold bg-white">TAILWIND</span>
-                </div>
-            </div>
-
+        <h1 class="text-5xl font-bold mb-4">Hi, I'm <span class="text-[#d4759e]">Jiya Dhiman</span></h1>
+        <h2 class="text-xl text-gray-600 mb-6">Computer Science Student at Purdue University</h2>
+        <p class="max-w-2xl text-gray-700 mb-8">First-year CS student passionate about software development, problem-solving, and building innovative solutions. Currently seeking internship opportunities.</p>
+        <div class="flex gap-4">
+            <a href="https://github.com/jiya-dhiman" class="p-3 bg-pink-100 rounded-full hover:bg-[#d4759e] hover:text-white transition-all"><i data-lucide="github"></i></a>
+            <a href="https://linkedin.com/in/jiya-dhiman" class="p-3 bg-pink-100 rounded-full hover:bg-[#d4759e] hover:text-white transition-all"><i data-lucide="linkedin"></i></a>
+            <a href="mailto:jdhiman@purdue.edu" class="p-3 bg-pink-100 rounded-full hover:bg-[#d4759e] hover:text-white transition-all"><i data-lucide="mail"></i></a>
         </div>
     </section>
 
-    <footer class="text-center py-20 font-bold">
-        <p>Made with ❤️ in West Lafayette</p>
+    <section id="experience" class="py-20 max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Experience & Education</h2>
+        <div class="space-y-6">
+            <div class="brutalist-card p-6 border border-pink-200">
+                <div class="flex gap-4">
+                    <div class="p-3 bg-pink-50 rounded-lg h-fit"><i data-lucide="graduation-cap" class="text-[#d4759e]"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold">B.S. in Computer Science</h3>
+                        <p class="text-[#d4759e] font-semibold">Purdue University • Expected May 2029</p>
+                        <p class="text-sm text-gray-500 mb-4">GPA: 3.89</p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>▹ CS Women's Network, InnovateHer</li>
+                            <li>▹ Coursework: C, Java, Discrete Math</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="brutalist-card p-6 border border-pink-200">
+                <div class="flex gap-4">
+                    <div class="p-3 bg-pink-50 rounded-lg h-fit"><i data-lucide="briefcase" class="text-[#d4759e]"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold">Chief Technology Officer</h3>
+                        <p class="text-[#d4759e] font-semibold">Gov School of Tech. Innovation • June 2024</p>
+                        <ul class="text-gray-700 space-y-2 mt-2">
+                            <li>▹ Built a Python-based translator supporting 25+ languages</li>
+                            <li>▹ Designed language-learning prototype in Figma</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-500 border-t border-pink-100">
+        © 2026 Jiya Dhiman. Built with React vibes & Tailwind.
     </footer>
 
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
