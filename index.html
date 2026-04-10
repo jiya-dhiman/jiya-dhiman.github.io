@@ -5,91 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jiya Dhiman | Purdue CS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
-            --primary: #d4759e;
-            --background: linear-gradient(135deg, #fef5f8 0%, #fef3f9 25%, #f9f1f9 50%, #f5f3fb 75%, #f3f5fc 100%);
+            --primary-pink: #d4759e;
+            --soft-pink: #fef5f8;
+            --border-glow: rgba(212, 117, 158, 0.2);
         }
+
         body {
-            background: var(--background);
+            /* This matches your Figma background gradient */
+            background: linear-gradient(135deg, #fef5f8 0%, #fef3f9 25%, #f9f1f9 50%, #f5f3fb 75%, #f3f5fc 100%);
             background-attachment: fixed;
             color: #2d1b2e;
+            font-family: 'Inter', sans-serif;
         }
-        .brutalist-card {
-            background: rgba(255, 255, 255, 0.7);
-            border: 1px solid rgba(212, 117, 158, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 0.625rem;
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glow);
+            border-radius: 1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-pink);
+        }
+
+        .pink-button {
+            background-color: var(--primary-pink);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .pink-button:hover {
+            opacity: 0.9;
         }
     </style>
 </head>
-<body class="font-sans">
+<body class="p-4 md:p-8">
 
-    <nav class="fixed top-0 w-full bg-white/70 backdrop-blur-md border-b border-pink-100 z-50 px-8 py-4 flex justify-between items-center">
-        <span class="text-[#d4759e] font-bold text-xl">Portfolio</span>
-        <div class="hidden md:flex space-x-8 font-medium">
+    <nav class="max-w-5xl mx-auto flex justify-between items-center mb-16 py-4">
+        <div class="text-xl font-bold tracking-tight text-[#d4759e]">JIYA_DHIMAN</div>
+        <div class="space-x-6 font-medium text-sm uppercase tracking-widest">
             <a href="#about" class="hover:text-[#d4759e]">About</a>
-            <a href="#experience" class="hover:text-[#d4759e]">Experience</a>
             <a href="#projects" class="hover:text-[#d4759e]">Projects</a>
-            <a href="#contact" class="hover:text-[#d4759e]">Contact</a>
+            <a href="mailto:jdhiman@purdue.edu" class="hover:text-[#d4759e]">Contact</a>
         </div>
     </nav>
 
-    <section id="hero" class="min-h-screen flex flex-col items-center justify-center text-center px-6">
-        <div class="w-48 h-48 rounded-full border-4 border-[#d4759e]/20 overflow-hidden mb-8 shadow-xl">
-            <img src="YOUR_IMAGE_LINK_HERE" alt="Jiya Dhiman" class="w-full h-full object-cover">
-        </div>
-        <h1 class="text-5xl font-bold mb-4">Hi, I'm <span class="text-[#d4759e]">Jiya Dhiman</span></h1>
-        <h2 class="text-xl text-gray-600 mb-6">Computer Science Student at Purdue University</h2>
-        <p class="max-w-2xl text-gray-700 mb-8">First-year CS student passionate about software development, problem-solving, and building innovative solutions. Currently seeking internship opportunities.</p>
-        <div class="flex gap-4">
-            <a href="https://github.com/jiya-dhiman" class="p-3 bg-pink-100 rounded-full hover:bg-[#d4759e] hover:text-white transition-all"><i data-lucide="github"></i></a>
-            <a href="https://linkedin.com/in/jiya-dhiman" class="p-3 bg-pink-100 rounded-full hover:bg-[#d4759e] hover:text-white transition-all"><i data-lucide="linkedin"></i></a>
-            <a href="mailto:jdhiman@purdue.edu" class="p-3 bg-pink-100 rounded-full hover:bg-[#d4759e] hover:text-white transition-all"><i data-lucide="mail"></i></a>
-        </div>
-    </section>
+    <header class="max-w-3xl mx-auto text-center mb-24">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+            Building the <span class="text-[#d4759e]">future</span> of tech at Purdue.
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            I'm a first-year Computer Science student passionate about software development and building solutions for campus communities.
+        </p>
+        <a href="#projects" class="pink-button inline-block shadow-lg">View My Work</a>
+    </header>
 
-    <section id="experience" class="py-20 max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">Experience & Education</h2>
-        <div class="space-y-6">
-            <div class="brutalist-card p-6 border border-pink-200">
-                <div class="flex gap-4">
-                    <div class="p-3 bg-pink-50 rounded-lg h-fit"><i data-lucide="graduation-cap" class="text-[#d4759e]"></i></div>
-                    <div>
-                        <h3 class="text-xl font-bold">B.S. in Computer Science</h3>
-                        <p class="text-[#d4759e] font-semibold">Purdue University • Expected May 2029</p>
-                        <p class="text-sm text-gray-500 mb-4">GPA: 3.89</p>
-                        <ul class="text-gray-700 space-y-2">
-                            <li>▹ CS Women's Network, InnovateHer</li>
-                            <li>▹ Coursework: C, Java, Discrete Math</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="brutalist-card p-6 border border-pink-200">
-                <div class="flex gap-4">
-                    <div class="p-3 bg-pink-50 rounded-lg h-fit"><i data-lucide="briefcase" class="text-[#d4759e]"></i></div>
-                    <div>
-                        <h3 class="text-xl font-bold">Chief Technology Officer</h3>
-                        <p class="text-[#d4759e] font-semibold">Gov School of Tech. Innovation • June 2024</p>
-                        <ul class="text-gray-700 space-y-2 mt-2">
-                            <li>▹ Built a Python-based translator supporting 25+ languages</li>
-                            <li>▹ Designed language-learning prototype in Figma</li>
-                        </ul>
-                    </div>
-                </div>
+    <section id="about" class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 mb-24">
+        <div class="glass-card p-8">
+            <h2 class="text-2xl font-bold mb-4">Background</h2>
+            <p class="text-gray-700 leading-relaxed">
+                As a College of Science Ambassador, I help prospective students navigate Purdue life. I'm active in the CS Women's Network and InnovateHer, focusing on inclusive tech spaces.
+            </p>
+        </div>
+        <div class="glass-card p-8">
+            <h2 class="text-2xl font-bold mb-4">Skills</h2>
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-white border border-pink-100 px-3 py-1 rounded-full text-sm font-medium">Java</span>
+                <span class="bg-white border border-pink-100 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                <span class="bg-white border border-pink-100 px-3 py-1 rounded-full text-sm font-medium">C</span>
+                <span class="bg-white border border-pink-100 px-3 py-1 rounded-full text-sm font-medium">HTML/CSS</span>
+                <span class="bg-white border border-pink-100 px-3 py-1 rounded-full text-sm font-medium">Figma</span>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-gray-500 border-t border-pink-100">
-        © 2026 Jiya Dhiman. Built with React vibes & Tailwind.
+    <section id="projects" class="max-w-5xl mx-auto mb-24">
+        <h2 class="text-3xl font-bold mb-10 text-center">Featured Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-card p-8">
+                <div class="text-[#d4759e] font-bold text-xs uppercase mb-2">Hackathon Project</div>
+                <h3 class="text-xl font-bold mb-3">Under The Bell Tower</h3>
+                <p class="text-gray-600 text-sm mb-4">A Purdue-themed multiplayer game with real-time chat boxes and game state sync.</p>
+                <div class="text-xs font-mono text-gray-500">JS • WebSockets • CSS</div>
+            </div>
+            <div class="glass-card p-8">
+                <div class="text-[#d4759e] font-bold text-xs uppercase mb-2">Java Development</div>
+                <h3 class="text-xl font-bold mb-3">Restaurant Reservation</h3>
+                <p class="text-gray-600 text-sm mb-4">Multi-client system utilizing concurrency and Network I/O in Java.</p>
+                <div class="text-xs font-mono text-gray-500">Java • Swing • Concurrency</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="max-w-5xl mx-auto text-center pb-12 text-sm text-gray-400">
+        <p>© 2026 Jiya Dhiman. Boiler Up!</p>
     </footer>
 
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-    </script>
 </body>
 </html>
