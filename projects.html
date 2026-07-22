@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Jiya Dhiman</title>
+<meta name="description" content="Software projects by Jiya Dhiman, Computer Science student at Purdue University.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark">Jiya<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#education">Education</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#leadership">Leadership</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="projects.html" class="is-active">Projects</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <i class='bx bx-menu'></i>
+    </button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="blob" style="width:280px;height:280px;background:var(--lavender);top:-100px;left:-80px;"></div>
+  <div class="blob" style="width:240px;height:240px;background:var(--apricot);top:20px;right:-90px;animation-delay:-5s;"></div>
+  <div class="wrap">
+    <div class="eyebrow">Projects</div>
+    <h1>Selected work.</h1>
+    <p>A collection of software systems, applications, and games I've built at Purdue and beyond &mdash; spanning full-stack web apps, real-time multiplayer systems, and desktop applications.</p>
+  </div>
+</header>
+
+<main>
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="project-grid">
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="featured-tag">Featured</span>
+            <span class="project-date">July 2026</span>
+          </div>
+          <h3>BollyBeat Lounge</h3>
+          <p>A full-stack Bollywood music recommendation web app built on a scalable Flask backend.</p>
+          <ul>
+            <li>Engineered a full-stack music recommendation platform utilizing a scalable Flask backend architecture.</li>
+            <li>Integrated the Google Gemini API to process user preference prompts and generate personalized song recommendations.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">Render</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/jiya-dhiman/BollyBeat_Lounge" target="_blank"><i class='bx bxl-github'></i> GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="featured-tag">InnovateHer Hackathon</span>
+            <span class="project-date">Feb 2026</span>
+          </div>
+          <h3>Under The Bell Tower</h3>
+          <p>A Purdue-themed multiplayer browser game with real-time chat and state synchronization.</p>
+          <ul>
+            <li>Architected a Purdue-themed multiplayer browser game using a client-server, event-driven architecture.</li>
+            <li>Engineered real-time chat infrastructure and low-latency state synchronization for multi-user interactivity.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">WebSockets</span>
+          </div>
+          <div class="project-links">
+            <a href="https://devpost.com/software/under-the-bell-tower" target="_blank"><i class='bx bxl-codepen'></i> Devpost</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="featured-tag">Java / OOP</span>
+            <span class="project-date">Nov 2025</span>
+          </div>
+          <h3>Restaurant Reservation Manager</h3>
+          <p>A multi-client reservation platform with concurrency, file I/O, and network I/O.</p>
+          <ul>
+            <li>Developed a multi-client reservation platform utilizing file I/O, object concurrency, and network sockets.</li>
+            <li>Designed an intuitive Java Swing GUI backed by secure user authentication and multi-threaded scheduling logs.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Swing</span>
+            <span class="tag">Sockets</span>
+            <span class="tag">Concurrency</span>
+          </div>
+          <div class="project-links">
+            <a href="https://youtu.be/wPv7WEtXi2s" target="_blank"><i class='bx bxl-youtube'></i> Demo</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="featured-tag">HelloWorld Hackathon</span>
+            <span class="project-date">Sept 2025</span>
+          </div>
+          <h3>BoilerRoute</h3>
+          <p>A mobile-first web app for crowdsourced parking and closure reporting at Purdue.</p>
+          <ul>
+            <li>Built a responsive, mobile-first web interface rendering real-time campus parking metrics organized by location.</li>
+            <li>Implemented a crowdsourced lane-closure warning system with data-validating community voting logic.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Vite</span>
+          </div>
+          <div class="project-links">
+            <a href="https://devpost.com/software/boiler-route" target="_blank"><i class='bx bxl-codepen'></i> Devpost</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Let's build something.</h2>
+      <p>Open to summer 2027 internship opportunities in software engineering and full-stack development.</p>
+      <a href="mailto:jdhiman@purdue.edu" class="btn btn-solid">Email Me <i class='bx bx-envelope'></i></a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span>Jiya Dhiman &middot; Purdue University &middot; Class of 2029</span>
+    <a href="mailto:jdhiman@purdue.edu">jdhiman@purdue.edu</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
