@@ -86,4 +86,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.5 });
     sections.forEach(s => navIo.observe(s));
   }
+
+  // Scroll progress bar + back-to-top button
+  const progressBar = document.querySelector('.scroll-progress');
+  const backToTop = document.querySelector('.back-to-top');
+
+  const onScroll = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    if (progressBar) progressBar.style.width = pct + '%';
+    if (backToTop) backToTop.classList.toggle('is-visible', scrollTop > 480);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  }
 });
