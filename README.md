@@ -1,4 +1,4 @@
-# jiya-dhiman.github.io
+# jiya-dhiman
 
 Personal portfolio site for Jiya Dhiman, Computer Science student at Purdue University.
 
