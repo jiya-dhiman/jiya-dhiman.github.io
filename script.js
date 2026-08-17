@@ -106,4 +106,32 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
     });
   }
+
+  // Polaroid lightbox (hidden gallery page)
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const lightboxClose = document.querySelector('.lightbox-close');
+  const polaroids = document.querySelectorAll('.polaroid');
+
+  if (lightbox && polaroids.length) {
+    polaroids.forEach(p => {
+      p.addEventListener('click', () => {
+        const img = p.querySelector('img');
+        const caption = p.querySelector('figcaption');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = caption ? caption.textContent : '';
+        lightbox.classList.add('is-open');
+      });
+    });
+    const closeLightbox = () => lightbox.classList.remove('is-open');
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  }
 });

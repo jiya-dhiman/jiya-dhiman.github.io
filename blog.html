@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jiya dhiman</title>
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="blog-body">
+
+<!--
+  This page is intentionally unlinked from the rest of the site.
+  To add a new photo: duplicate one <figure class="polaroid"> block below,
+  swap the image src to your new file in images/blog/, and edit the caption.
+  Rotation classes (tilt-1 through tilt-5) alternate the little scrapbook tilt.
+-->
+
+<main class="blog-wrap">
+
+  <div class="blob" style="width:280px;height:280px;background:var(--lavender);top:-100px;left:-90px;"></div>
+  <div class="blob" style="width:240px;height:240px;background:var(--apricot);top:40px;right:-100px;animation-delay:-5s;"></div>
+
+  <header class="blog-header">
+    <span class="hero-note">you found it &mdash;</span>
+    <h1>a little bit of<br><span class="accent">college.</span></h1>
+    <p class="blog-sub">Some of my fav times at Purdue in no particular order.</p>
+  </header>
+
+  <section class="polaroid-grid">
+
+    <figure class="polaroid tilt-1 reveal">
+      <img src="images/blog/photo1.jpg" alt="">
+      <figcaption>TA office hr</figcaption>
+    </figure>
+
+    <figure class="polaroid tilt-2 reveal">
+      <img src="images/blog/photo2.jpg" alt="">
+      <figcaption>bridge bridge bridge</figcaption>
+    </figure>
+
+    <figure class="polaroid tilt-3 reveal">
+      <img src="images/blog/photo3.jpg" alt="">
+      <figcaption>happy hollow</figcaption>
+    </figure>
+
+    <figure class="polaroid tilt-4 reveal">
+      <img src="images/blog/photo4.jpg" alt="">
+      <figcaption>bowling</figcaption>
+    </figure>
+
+    <figure class="polaroid tilt-5 reveal">
+      <img src="images/blog/photo5.jpg" alt="">
+      <figcaption>stuffed animals</figcaption>
+    </figure>
+
+    <figure class="polaroid tilt-2 reveal">
+      <img src="images/blog/photo6.jpg" alt="">
+      <figcaption>we innovated</figcaption>
+    </figure>
+
+  </section>
+
+  <footer class="blog-footer">
+    <span>congrats you found a secret.</span>
+  </footer>
+
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close"><i class='bx bx-x'></i></button>
+  <img src="" alt="" id="lightbox-img">
+  <p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
